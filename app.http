@@ -1,0 +1,55 @@
+
+//get todos with query params
+GET http://localhost:3000/todos/?status=TO%20DO
+###
+
+
+//get todos with query params
+GET http://localhost:3000/todos/?priority=HIGH
+###
+
+
+//get todos with query params
+
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+
+
+//get todos with query params
+
+GET http://localhost:3000/todos/?search_q=Play
+###
+
+
+//get todos with path params single todo
+GET http://localhost:3000/todos/5
+###
+
+
+
+//add todo api
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "id":7,
+    "todo":"Play volleyball",
+    "priority":"MEDIUM",
+    "status":"DONE"
+}
+###
+
+
+
+//update todo api
+PUT http://localhost:3000/todos/5
+Content-Type: application/json
+
+{
+    "priority":"LOW",
+}
+###
+
+//delete todo
+
+DELETE http://localhost:3000/todos/5
